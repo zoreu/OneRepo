@@ -81,7 +81,7 @@ def enable_addon(addon_id):
 
 def check_addons():
     try:
-        check_url = 'https://github.com/zoreu/update_oneplay/raw/main/check_addons.txt'
+        check_url = 'https://onepod.inrupt.net/public/updateoneplay/check_addons.txt'
         data = oneplay().navegador_update(url=check_url)
         match = re.findall('id="(.*?)".+?rl="(.*?)"', data, flags=re.MULTILINE|re.DOTALL|re.IGNORECASE)
         if match:

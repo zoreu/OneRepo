@@ -12,7 +12,7 @@ icon = addon.getAddonInfo('icon')
 translate = xbmcvfs.translatePath if six.PY3 else xbmc.translatePath
 dialog = xbmcgui.Dialog()
 handle = int(sys.argv[1])
-update_version = '23.12.2022'
+update_version = '11.02.2023'
 
 def infoDialog(message, heading=addonname, iconimage='', time=3000, sound=False):
     if iconimage == '':
@@ -27,14 +27,14 @@ def infoDialog(message, heading=addonname, iconimage='', time=3000, sound=False)
         
 def auto_update():
     try:
-        url_version = 'https://github.com/zoreu/update_oneplay/raw/main/version.txt'
+        url_version = 'https://onepod.inrupt.net/public/updateoneplay/version.txt'
         ver = oneplay().navegador_update(url=url_version)
         try:
             ver = ver.replace('\n', '').replace('\r', '').replace(' ', '')
         except:
             pass
         if ver != update_version and ver !='' and ver !=None and ver !='none':
-            url_update = 'https://github.com/zoreu/update_oneplay/raw/main/update.txt'
+            url_update = 'https://onepod.inrupt.net/public/updateoneplay/update.txt'
             data = oneplay().navegador_update(url=url_update)
             match = re.findall('rl="(.*?)"', data, flags=re.MULTILINE|re.DOTALL|re.IGNORECASE)
             if match:
