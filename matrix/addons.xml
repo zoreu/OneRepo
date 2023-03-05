@@ -287,7 +287,7 @@ v1.0.0
     </extension>
 </addon>
 
-<addon id="plugin.video.f4mTester" version="4.0.9" name="f4mTester" provider-name="desconhecido">
+<addon id="plugin.video.f4mTester" version="4.1.0" name="f4mTester" provider-name="desconhecido">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.six" />
