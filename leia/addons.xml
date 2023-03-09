@@ -438,13 +438,11 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.showdebola" version="1.0.4" name="[COLOR lime]SHOW DE BOLA[/COLOR]" provider-name="OnePlay Team">
+<addon id="plugin.video.showdebola" version="1.0.5" name="[COLOR lime]SHOW DE BOLA[/COLOR]" provider-name="OnePlay Team">
     <requires>
         <import addon="script.module.simplejson" />
         <import addon="script.module.six" />
         <import addon="script.module.kodi-six" />
-		<import addon="script.module.requests"/>
-		<import addon="script.module.beautifulsoup4"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
