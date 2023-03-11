@@ -287,7 +287,7 @@ v1.0.0
     </extension>
 </addon>
 
-<addon id="plugin.video.f4mTester" version="4.1.1" name="f4mTester" provider-name="Equipe Oneplay e Tiago ">
+<addon id="plugin.video.f4mTester" version="4.1.2" name="f4mTester" provider-name="Equipe Oneplay e Tiago ">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.six" />
