@@ -222,20 +222,27 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.animesplay" version="1.0.2" name="[B]Animes [COLOR yellow]Play[/COLOR][/B]" provider-name="Equipe Oneplay">
+<addon id="plugin.video.animesplay" version="1.0.5" name="[B][COLOR white]Animes[/COLOR] [COLOR yellow]Play[/COLOR][/B]" provider-name="OnePlay Team">
     <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
-        <import addon="script.module.simplejson"/>
+        <import addon="script.module.simplejson" />
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+        <import addon="script.module.beautifulsoup4"/>
+        <import addon="script.module.fasthttp"/>
     </requires>
-    <extension point="xbmc.python.pluginsource" library="main.py">
+    <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
     </extension>
-
-
     <extension point="xbmc.addon.metadata">
-        <summary>Os Melhores animes aqui</summary>
-        <description>Animes Play oferece diversos animes para o kodi</description>
+		<summary>Animes play Ã© um addon que reproduz animes, podendo salvar nos favoritos</summary>
+		<description>Todos os videos sÃ£o de sites terceiros, nÃ£o hospedamos conteudo</description>
         <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
     </extension>
 </addon>
 
@@ -570,6 +577,28 @@
         <disclaimer>The author of this addon do not host any of the content which is found and have no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
         <assets>
             <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon>
+
+<addon id="script.module.fasthttp" name="FastHttp" version="0.0.5" provider-name="Joel">
+    <requires>
+        <import addon="script.module.six" />
+        <import addon="script.module.kodi-six" />
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.python.pluginsource" library="lib/default.py" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">fasthttp - internet access tool for webscraping</summary>
+        <summary lang="pt">fasthttp - ferramenta de acesso a internet para webscraping</summary>
+        <description lang="en">fasthttp is a tool that makes interception difficult in https mode, in addition to simulating a desktop browser</description>
+        <description lang="pt">fasthttp Ã© uma ferramenta que dificulta interceptaÃ§Ã£o no modo https, alem de simular um navegador de desktop</description>
+        <disclaimer lang="en">fasthttp is a tool that is not affiliated with xbmc/kodi, therefore 3rd party</disclaimer>
+        <disclaimer lang="pt">fasthttp Ã© uma ferramenta que nÃ£o Ã© filiada ao xbmc/kodi, portanto de terceiros</disclaimer>
+        <assets>
+            <icon>icon.jpg</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
     </extension>
