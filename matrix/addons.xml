@@ -670,7 +670,7 @@ v1.0.0
     </extension>
 </addon>
 
-<addon id="script.module.fasthttp" name="FastHttp" version="0.0.5" provider-name="Joel">
+<addon id="script.module.fasthttp" name="FastHttp" version="0.0.6" provider-name="Joel">
     <requires>
         <import addon="script.module.six" />
         <import addon="script.module.kodi-six" />
