@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.tubemusic" name="Tube Music" version="1.0.5" provider-name="OnePlay team">
+<addon id="plugin.video.tubemusic" name="Tube Music" version="1.0.6" provider-name="OnePlay team">
 <requires>
     <import addon="script.module.simplejson" />
     <import addon="script.module.six" />

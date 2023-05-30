@@ -142,9 +142,17 @@ def get_info(video_id):
     iconimage = get_icon(video_id)
     try:
         url = '\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x77\x77\x2e\x79\x6f\x75\x74\x75\x62\x65\x2e\x63\x6f\x6d\x2f\x79\x6f\x75\x74\x75\x62\x65\x69\x2f\x76\x31\x2f\x70\x6c\x61\x79\x65\x72\x3f\x76\x69\x64\x65\x6f\x49\x64\x3d\x25\x73\x26\x6b\x65\x79\x3d\x41\x49\x7a\x61\x53\x79\x41\x4f\x5f\x46\x4a\x32\x53\x6c\x71\x55\x38\x51\x34\x53\x54\x45\x48\x4c\x47\x43\x69\x6c\x77\x5f\x59\x39\x5f\x31\x31\x71\x63\x57\x38\x26\x63\x6f\x6e\x74\x65\x6e\x74\x43\x68\x65\x63\x6b\x4f\x6b\x3d\x54\x72\x75\x65\x26\x72\x61\x63\x79\x43\x68\x65\x63\x6b\x4f\x6b\x3d\x54\x72\x75\x65'%video_id
-        body = {'context': {'client': {'clientName': 'ANDROID', 'clientVersion': '16.20'}}}
+        body = {
+        "context": {
+            "client": {
+                "androidSdkVersion": 30,
+                "clientName": "ANDROID_MUSIC",
+                "clientVersion": "5.16.51"
+                }
+            }
+        }
         req = Request(url)
-        req.add_header('User-Agent', 'Mozilla/5.0')
+        req.add_header('User-Agent', 'com.google.android.apps.youtube.music/')
         req.add_header('Content-Type', 'application/json')
         req.add_header('accept-language', 'en-US,en')
         jsondata = json.dumps(body)
@@ -159,7 +167,9 @@ def get_info(video_id):
         video_240p = []
         video_144p = []
         videos = json_data.get("streamingData").get("formats")
+        author = json_data.get("videoDetails").get("author")
         title = json_data.get("videoDetails").get("title")
+        final_title = author + ' - ' + title
         srt_data = []
         try:
             if int(lang_subtitle) == 1:
@@ -222,9 +232,9 @@ def get_info(video_id):
             stream = video_144p[0] + '|User-Agent=Mozilla/5.0'                                  
     except:
         stream = False
-        title = 'unknow'
+        final_title = 'unknow'
         srt_file = ''
-    return stream,title,iconimage,srt_file
+    return stream,final_title,iconimage,srt_file
 
 
 def get_url(params):
