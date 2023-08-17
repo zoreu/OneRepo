@@ -443,7 +443,7 @@
     </extension>
 </addon>
 
-<addon id="plugin.video.showdebola" version="1.0.6" name="[COLOR lime]SHOW DE BOLA[/COLOR]" provider-name="OnePlay Team">
+<addon id="plugin.video.showdebola" version="1.0.7" name="[COLOR lime]SHOW DE BOLA[/COLOR]" provider-name="OnePlay Team">
     <requires>
         <import addon="script.module.simplejson" />
         <import addon="script.module.six" />
